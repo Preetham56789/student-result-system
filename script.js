@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (studentForm) {
     studentForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      const name = studentForm[0].value;
-      const roll = studentForm[1].value;
-      const studentClass = studentForm[2].value;
+      const name = studentForm.name.value;
+      const roll = studentForm.roll.value;
+      const studentClass = studentForm.class.value;
 
       localStorage.setItem("student", JSON.stringify({ name, roll, studentClass }));
       alert("Student details saved!");
